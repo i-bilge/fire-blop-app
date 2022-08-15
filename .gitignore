@@ -1,7 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # keys
-/src/auth/ApiKey.js
 
 # dependencies
 /node_modules
