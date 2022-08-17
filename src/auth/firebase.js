@@ -21,6 +21,8 @@ import { firebaseConfig } from "./ApiKey";
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+export const provider = new GoogleAuthProvider();
+
 
 export const createUser = async (email, password, displayName) => {
     try {
@@ -33,7 +35,7 @@ export const createUser = async (email, password, displayName) => {
     }
   };
 
-  export const signIn = async (email, password) => {
+  export const signIn = async (email, password, provider) => {
     try {
       let userCredential = await signInWithEmailAndPassword(
         auth,
